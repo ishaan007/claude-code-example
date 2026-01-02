@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumina AI Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -38,10 +40,12 @@
             top: 0;
             width: 100%;
             background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
             z-index: 1000;
             padding: 1rem 0;
             border-bottom: 1px solid var(--border-color);
+            will-change: transform;
         }
 
         .nav-container {
@@ -83,7 +87,7 @@
             font-weight: 600;
             font-size: 0.9rem;
             text-decoration: none;
-            transition: all 0.2s;
+            transition: opacity 0.2s, transform 0.2s, background-color 0.2s;
             cursor: pointer;
             border: none;
             display: inline-flex;
@@ -261,7 +265,7 @@
             border-radius: 50px;
             margin-bottom: 0.75rem;
             border: 1px solid var(--border-color);
-            transition: all 0.2s;
+            transition: border-color 0.2s;
         }
 
         .chapter-item:hover {
@@ -357,7 +361,7 @@
             border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 2rem;
-            transition: all 0.3s;
+            transition: border-color 0.3s, transform 0.3s;
         }
 
         .feature-card:hover {
@@ -409,7 +413,7 @@
             border: 1px solid var(--border-color);
             border-radius: 16px;
             overflow: hidden;
-            transition: all 0.3s;
+            transition: border-color 0.3s, transform 0.3s;
         }
 
         .course-card:hover {
